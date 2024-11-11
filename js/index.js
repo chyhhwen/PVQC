@@ -69,15 +69,34 @@ window.onload = () =>
     {
         document.cookie = "name=123";
     }
-    let now = 0;
-    try
+    else
     {
-        now = getran(0,data.length - 1);
+        let now = 0;
+        let que = document.querySelector('#questions');
+        var check = true;
+
+        que.addEventListener('click',() =>
+        {
+            console.log("click");
+            if(check)
+            {
+                try
+                {
+                    now = getran(0,data.length - 1);
+                }
+                catch (e)
+                {
+                    console.log(e);
+                }
+                text(data[now][0]);
+                check = false;
+            }
+            else
+            {
+                text(data[now][1]);
+                check = true;
+            }
+        });
     }
-    catch (e)
-    {
-        console.log(e);
-    }
-    text(data[now][0]);
 }
 
