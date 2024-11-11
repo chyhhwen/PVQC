@@ -4,6 +4,24 @@ body
     border:0px;
 }
 
+nav
+{
+    width: 80vw;
+    margin-left: 10vw;
+    height:12vh;
+    background: aquamarine;
+    position: sticky;
+    font-weight: bold;
+    text-align: center;
+    font-size: 300%;
+    display: flex;
+    align-items: center;
+    border:1px solid rgb(202,201,201);
+    border-radius:0 0 10px 10px;
+    z-index: -1;
+    padding-left: 5%;
+}
+
 #questions
 {
     width:50vw;
@@ -16,4 +34,34 @@ body
     font-size:450%;
     text-align:center;
     line-height: 40vh;
+    border:1px solid rgb(202,201,201);
+    z-index: -1;
+}
+
+#name
+{   #test
+    {
+        & input[type = 'text']
+        {
+            width:80%;
+            font-size: 200%;
+            border-radius: 10px;
+        }
+        & input[type = 'submit']
+        {
+            width:20%;
+            border-radius: 10px;
+        }
+        width: 20vw;
+        height:5vh;
+        position: absolute;
+        top:48%;
+        left: 40%;
+        display: flex;
+    }
+    width: 100vw;
+    height:100vh;
+    backdrop-filter: blur(5px);
+    position: sticky;
+    z-index: 0;
 }

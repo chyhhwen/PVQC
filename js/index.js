@@ -39,6 +39,20 @@ text = (temp) =>
     quest.innerHTML=put;
 }
 
+getname = () =>
+{
+    let name = document.querySelector('#name');
+    let text = document.querySelector('#user');
+    let title = document.querySelector('#title');
+    name.style.display = "none";
+    console.log(text.value);
+    title.style.display = "";
+    var test = "<span> User:";
+    test += text.value;
+    test += "</span>";
+    title.innerHTML = test;
+}
+
 let data;
 
 request.open('GET', requestURL);
@@ -55,14 +69,15 @@ window.onload = () =>
     {
         document.cookie = "name=123";
     }
-
-    let now = getran(0,data.length - 1);
-    /*if(now == temp)
+    let now = 0;
+    try
     {
-        now = getran(0,100);
+        now = getran(0,data.length - 1);
     }
-    temp = now;*/
+    catch (e)
+    {
+        console.log(e);
+    }
     text(data[now][0]);
-    //window.location.reload();
 }
 
