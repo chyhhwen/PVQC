@@ -1,0 +1,19 @@
+body
+{
+    margin:0px;
+    border:0px;
+}
+
+#questions
+{
+    width:50vw;
+    height:40vh;
+    position: absolute;
+    top: 30vh;
+    left: 25vw;
+    background: aquamarine;
+    border-radius: 25px;
+    font-size:450%;
+    text-align:center;
+    line-height: 40vh;
+}
